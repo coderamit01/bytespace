@@ -49,7 +49,7 @@ const Header = () => {
           <div className="flex space-x-3 items-center md:hidden">
              <MdOutlineShoppingBag size="24" className="text-[#F5F5F6]" />
             <Sheet>
-              <SheetTrigger asChild>
+              <SheetTrigger>
                 <button
                   className="rounded-md p-2 hover:bg-white/10"
                   aria-label="Open menu"
