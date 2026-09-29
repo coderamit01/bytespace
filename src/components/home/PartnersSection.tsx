@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const PartnersSection = () => {
   return (
-    <section className="bg-shuttle">
+    <section className="bg-shuttle-50">
       <div className="container py-16 xl:py-20">
         <Marquee
           autoFill

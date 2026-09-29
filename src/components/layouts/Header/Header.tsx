@@ -47,7 +47,7 @@ const Header = () => {
           </div>
           {/* Mobile Menu  */}
           <div className="flex space-x-3 items-center md:hidden">
-            <MdOutlineShoppingBag size="24" className="text-[#F5F5F6]" />
+            <MdOutlineShoppingBag size="24" className="text-shuttle" />
             <Sheet>
               <SheetTrigger className="mt-9.5 text-shuttle-50 lg:hidden" aria-label="Open menu">
                 <RiMenu3Line size="24" className="text-white" />

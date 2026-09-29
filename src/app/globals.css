@@ -39,7 +39,14 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
-  --color-shuttle: #F5F5F6;
+  --color-lime: #d4fb20;
+  --color-purple:#003BE2;
+  --color-shuttle-50: #F5F5F6;
+  --color-shuttle-100: #e5e6e8;
+  --color-shuttle-400: #82868E;
+  --color-shuttle-700: #4B4C53;
+  --color-shuttle-950: #242528;
+  --color-shuttle-gray-950: #242528;
   --color-card: var(--card);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -49,8 +56,9 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 }
+
 @utility container {
-  @apply mx-auto max-w-[1200px] px-4;
+  @apply mx-auto max-w-300 px-4;
 }
 
 :root {
@@ -123,12 +131,30 @@
 }
 
 @layer base {
+  span,
+  p,
+  a {
+    @apply font-satoshi;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins;
+  }
+}
+@layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
