@@ -47,6 +47,7 @@
   --color-shuttle-700: #4B4C53;
   --color-shuttle-950: #242528;
   --color-shuttle-gray-950: #242528;
+  --color-Shuttle-gray-700: #4B4C53;
   --color-card: var(--card);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);

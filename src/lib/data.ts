@@ -149,3 +149,9 @@ export const categories: Category[] = [
   { label: "Marketing", icon: '/images/marketting.png' },
   { label: "Photography", icon: '/images/photo.png' },
 ];
+
+export const growthStats = [
+  { value: "12K", label: "Students" },
+  { value: "70+", label: "Courses" },
+  { value: "16", label: "Creators" },
+];

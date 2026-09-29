@@ -1,6 +1,5 @@
 import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } from "@/src/components/shared/avatar";
 import { avatars } from "@/src/lib/data";
-import { cn } from "@/src/lib/utils";
 import { CourseProps } from "@/src/types"
 import Image from "next/image";
 import Link from "next/link";
@@ -9,20 +8,14 @@ import { FiBarChart } from "react-icons/fi";
 
 const CourseCard = ({ course }: { course: CourseProps }) => {
   const {
-    id,
-    slug,
     title,
     image,
-    creatorId,
     level,
     rating,
     lessonsCount,
     duration,
     commentsCount,
-    enrolledPreview,
     price,
-    currency,
-    pricingType,
     author
   } = course;
   return (
@@ -65,7 +58,7 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
                 by{" "}
                 <Link
                   href={`/`}
-                  className="relative z-10 text-brand hover:underline text-[#003BE2]"
+                  className="relative z-10 text-brand hover:underline text-purple"
                 >
                   {author}
                 </Link>

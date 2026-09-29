@@ -8,7 +8,7 @@ import { useState } from "react";
 const TopicTabs = () => {
   const [active, setActive] = useState(courseTopics[0])
 
-  const activeItem = (item:string) => {
+  const activeItem = (item: string) => {
     setActive(item)
   }
 
@@ -18,7 +18,7 @@ const TopicTabs = () => {
       {courseTopics.map((item, id) => (
         <Pill key={id} topic={item} active={item === active} activeItem={activeItem} />
       ))}
-      <button type="button" className="typo-label-m whitespace-nowrap text-[#003BE2] hover:underline">
+      <button type="button" className="typo-label-m whitespace-nowrap text-purple hover:underline">
         + More
       </button>
     </div>

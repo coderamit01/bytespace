@@ -1,7 +1,6 @@
 import SectionTitle from "@/src/components/shared/SectionTitle"
 import { categories } from "@/src/lib/data"
 import Image from "next/image"
-import Link from "next/link"
 
 const LearningPathSection = () => {
   return (
