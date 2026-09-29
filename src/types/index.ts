@@ -37,3 +37,10 @@ export type Category = {
   label: string;
   icon: string;
 };
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  avatar: string;
+  quote: string;
+};
