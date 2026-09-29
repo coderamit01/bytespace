@@ -40,7 +40,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-lime: #d4fb20;
-  --color-purple:#003BE2;
+  --color-purple: #003BE2;
   --color-shuttle-50: #F5F5F6;
   --color-shuttle-100: #e5e6e8;
   --color-shuttle-400: #82868E;
@@ -131,7 +131,16 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@utility grid-bg {
+  @apply absolute inset-0 pointer-events-none;
+  background-image:
+    linear-gradient(to right, #1F53E5 1px, transparent 1px),
+    linear-gradient(to bottom, #1F53E5 1px, transparent 1px);
+  background-size: 120px 120px;
+}
+
 @layer base {
+
   span,
   p,
   a {
@@ -147,6 +156,7 @@
     @apply font-poppins;
   }
 }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
