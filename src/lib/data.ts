@@ -1,4 +1,4 @@
-import { CourseProps, Partner } from "@/src/types";
+import { Category, CourseProps, Partner } from "@/src/types";
 
 export const partners: Partner[] = [
   { name: "logolipsum", logo: "/partners/partner1.png" },
@@ -140,3 +140,12 @@ export const courses: CourseProps[] = [
     "image": "/courses/c6.jpg"
   }
 ]
+
+export const categories: Category[] = [
+  { label: "Design", icon: '/images/design.png' },
+  { label: "Development", icon: '/images/develop.png' },
+  { label: "IT & Software",icon: '/images/it.png' },
+  { label: "Business", icon: '/images/business.png' },
+  { label: "Marketing", icon: '/images/marketting.png' },
+  { label: "Photography", icon: '/images/photo.png' },
+];

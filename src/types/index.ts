@@ -32,3 +32,8 @@ export interface CourseProps {
   currency: string;
   pricingType: string;
 }
+
+export type Category = {
+  label: string;
+  icon: string;
+};
