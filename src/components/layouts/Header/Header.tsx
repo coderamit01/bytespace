@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoLight from "@/public/logo-light.png";
-import LogoDark from "@/public/logo-dark.png";
 import { NavItem } from "@/src/types";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/src/components/ui/sheet";
@@ -25,7 +24,7 @@ const Header = () => {
 
 
   return (
-    <header className="py-5">
+    <header className="absolute left-0 top-0 w-full z-30 py-6 md:py-10">
       <div className="container">
         <nav className="flex items-center justify-between gap-3">
           <Link href="/">
@@ -34,46 +33,46 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-6">
             {
               navItems.map((item, id) => (
-                <Link key={id} href={item.href} className="text-base font-satoshi font-normal text-[#F5F5F6] hover:text-white">
+                <Link key={id} href={item.href} className="text-base font-satoshi font-normal text-shuttle-50 hover:text-white transition-all hover:-translate-y-1">
                   {item.label}
                 </Link>
               ))
             }
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            <Link href="/login" className="text-base font-satoshi font-normal text-[#F5F5F6] hover:text-white">Sign In</Link>
-            <Link href="/signup" className="text-base font-satoshi font-normal text-[#F5F5F6] hover:text-white">Join Us</Link>
-            <MdOutlineShoppingBag size="22" className="text-[#F5F5F6]" />
+            <Link href="/login" className="text-base font-satoshi font-normal text-shuttle-50 hover:text-white">Sign In</Link>
+            <Link href="/signup" className="text-base font-satoshi font-normal text-shuttle-50 hover:text-white">Join Us</Link>
+            <MdOutlineShoppingBag size="22" className="text-shuttle-50" />
           </div>
           {/* Mobile Menu  */}
-          <div className="flex space-x-3 items-center md:hidden">
-            <MdOutlineShoppingBag size="24" className="text-shuttle" />
+          <div className="flex space-x-3 relative z-95 items-center md:hidden">
+            <MdOutlineShoppingBag size="24" fill="#F5F5F6" className="text-shuttle" />
             <Sheet>
-              <SheetTrigger className="mt-9.5 text-shuttle-50 lg:hidden" aria-label="Open menu">
+              <SheetTrigger className="text-shuttle-50 lg:hidden" aria-label="Open menu">
                 <RiMenu3Line size="24" className="text-white" />
               </SheetTrigger>
 
-              <SheetContent>
+              <SheetContent className="bg-purple">
                 <SheetHeader>
-                  <Image src={LogoDark} className="w-30 md:w-40 max-w-40" height={100} width={160} alt="Logo" />
+                  <Image src={LogoLight} className="w-30 md:w-40 max-w-40" height={100} width={160} alt="Logo" />
                 </SheetHeader>
 
                 <div className="pt-2 flex flex-col gap-5 px-4">
                   {
                     navItems.map((item, id) => (
-                      <Link key={id} href={item.href} className="text-base font-satoshi font-normal text-[#040819] hover:text--[#003BE2]">
+                      <Link key={id} href={item.href} className="text-base font-satoshi font-normal text-shuttle-50 hover:text-white">
                         {item.label}
                       </Link>
                     ))
                   }
 
-                  <div className="h-px bg-border" />
+                  <div className="h-px bg-border border-slate-300" />
                   <div className="flex items-center space-x-3">
-                    <Link href="/login" className="text-[#242528] font-satoshi font-semibold rounded-full flex items-center justify-center px-5 py-2 border border-[#D4FB20] bg-[#D4FB20]">
+                    <Link href="/login" className="text-[#242528] font-satoshi font-semibold rounded-full flex items-center justify-center px-5 py-2 border border-lime bg-lime">
                       Sign In
                     </Link>
 
-                    <Link href="/signup" className="text-[#242528] font-satoshi font-semibold rounded-full flex items-center justify-center px-5 py-2 border border-[#242528] bg-white hover:border-[#D4FB20] hover:bg-[#D4FB20]">
+                    <Link href="/signup" className="text-[#242528] font-satoshi font-semibold rounded-full flex items-center justify-center px-5 py-2 border border-[#242528] bg-white hover:border-lime hover:bg-lime">
                       Join Us
                     </Link>
                   </div>
