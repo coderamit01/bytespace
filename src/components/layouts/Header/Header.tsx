@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoLight from "@/public/logo-light.png";
 import LogoDark from "@/public/logo-dark.png";
-import { NavItem } from "@/src/types/type";
+import { NavItem } from "@/src/types";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/src/components/ui/sheet";
 import { RiMenu3Line } from "react-icons/ri";
@@ -47,15 +47,10 @@ const Header = () => {
           </div>
           {/* Mobile Menu  */}
           <div className="flex space-x-3 items-center md:hidden">
-             <MdOutlineShoppingBag size="24" className="text-[#F5F5F6]" />
+            <MdOutlineShoppingBag size="24" className="text-[#F5F5F6]" />
             <Sheet>
-              <SheetTrigger>
-                <button
-                  className="rounded-md p-2 hover:bg-white/10"
-                  aria-label="Open menu"
-                >
-                  <RiMenu3Line size="24" className="text-white" />
-                </button>
+              <SheetTrigger className="mt-9.5 text-shuttle-50 lg:hidden" aria-label="Open menu">
+                <RiMenu3Line size="24" className="text-white" />
               </SheetTrigger>
 
               <SheetContent>

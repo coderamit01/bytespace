@@ -2,8 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoDark from "@/public/logo-dark.png";
+import { NavItem } from "@/src/types";
 
-const linkColumns = [
+const linkColumns: NavItem[][] = [
   [
     { label: "Featured Courses", href: "#" },
     { label: "Featured Categories", href: "#" },
@@ -36,9 +37,9 @@ const legalLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-white font-satoshi text-neutral-900">
+    <footer className="bg-white border-t border-neutral-300 font-satoshi text-neutral-900">
       <div className="container">
-        <div className="grid grid-cols-12 gap-y-8 md:gap-12 pb-5 pt-12">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-12 pb-12 md:pb-20 pt-12">
           <div className="col-span-12 lg:col-span-6 md:pe-12">
             <Link href="/" className="inline-block">
               <Image
@@ -69,13 +70,13 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="h-12 shrink-0 rounded-full bg-[#D6FF1F] px-6 text-lg font-[500] text-neutral-900 transition hover:bg-[#c8f000] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+                className="h-12 shrink-0 rounded-full bg-[#D6FF1F] px-6 text-lg font-medium text-neutral-900 transition hover:bg-[#c8f000] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 cursor-pointer"
               >
                 Search
               </button>
             </form>
 
-            <p className="mt-8 text-xs leading-5 text-neutral-800">
+            <p className="mt-5 text-xs leading-5 text-neutral-800">
               By subscribing, you agree to our Privacy Policy and consent to
               receive updates from our company.
             </p>
