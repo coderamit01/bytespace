@@ -93,13 +93,12 @@ const HeroSection = () => {
         </div>
 
         <div aria-hidden="true" className="pointer-events-none select-none">
-          <Image src={SquiggleWhite} alt="" className="absolute h-auto max-w-none w-[calc(175px*var(--s))]  xl:left-[calc(183px*var(--s))] top-[calc(-35px*var(--s))] md:left-2 lg:left-12 hidden md:block" />
+          <Image src={SquiggleWhite} alt="" className="absolute h-auto max-w-none w-[calc(175px*var(--s))] 2xl:left-80 xl:left-[calc(200px*var(--s))] top-[calc(-35px*var(--s))] md:left-2 lg:left-12 hidden md:block" />
 
-          <Image src={PyramidWhite} alt="" className="absolute h-auto max-w-none w-[calc(188px*var(--s))]  top-[calc(-48px*var(--s))] md:right-2 lg:right-12 xl:right-30  hidden md:block" />
+          <Image src={PyramidWhite} alt="" className="absolute h-auto max-w-none w-[calc(188px*var(--s))] 2xl:right-50 top-[calc(-48px*var(--s))] md:right-2 lg:right-12 xl:right-30  hidden md:block" />
           
-          <Image src={RingWhite} alt="" className="absolute h-auto max-w-none w-[calc(342px*var(--s))]  xl:left-32.5 lg:left-5 md:-left-4 2xl:top-30 xl:top-25 lg:top-20 md:top-15 hidden md:block" />
-
-          <Image src={SquiggleLime} alt="" className="absolute h-auto max-w-none w-[calc(330px*var(--s))] lg:right-[calc(-17px*var(--s))] md:-right-8 xl:right-24  top-[calc(160px*var(--s))] grayscale brightness-110 hidden md:block" />
+          <Image src={RingWhite} alt="" className="absolute h-auto max-w-none w-[calc(342px*var(--s))] 2xl:left-65 xl:left-32.5 lg:left-5 md:-left-4 2xl:top-30 xl:top-25 lg:top-20 md:top-15 hidden md:block" />
+          <Image src={SquiggleLime} alt="" className="absolute h-auto max-w-none w-[calc(330px*var(--s))] lg:right-[calc(-17px*var(--s))] md:-right-8 xl:right-24 2xl:right-60 top-[calc(160px*var(--s))] grayscale brightness-110 hidden md:block" />
         </div>
 
         <div className="absolute left-1/2 -ml-50 md:ml-[calc(-350px*var(--s))] top-5 md:top-[calc(127px*var(--s))] origin-top-left scale-(--c) md:flex flex-col items-start rounded-2xl bg-white p-4 backdrop-blur-[10px]">
