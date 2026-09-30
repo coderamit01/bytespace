@@ -8,7 +8,7 @@ import TheBoy from "@/public/images/boy.png"
 import TheGirl from "@/public/images/girl.png"
 import SquiggleLime from "@/public/icons/squiggle-lime.png"
 import SquiggleLime2 from "@/public/icons/squiggle-lime-2.png"
-import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } from "@/src/components/shared/avatar"
+import { Avatar, AvatarGroup, AvatarGroupCount, AvatarImage } from "@/src/components/shared/avatar"
 
 const benefits: string[] = [
   "Share Your Expertise",

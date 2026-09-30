@@ -19,7 +19,7 @@ const SocialLogin = () => {
             key={name}
             type="button"
             aria-label={`Continue with ${name}`}
-            className="flex size-18 items-center justify-center rounded-3xl border border-[#D1D1D1] text-black transition-colors hover:bg-shuttle-50"
+            className="flex size-15 items-center justify-center rounded-3xl border border-[#D1D1D1] text-black transition-colors hover:bg-shuttle-50 cursor-pointer"
           >
             <Icon size={34} />
           </button>

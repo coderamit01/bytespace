@@ -11,7 +11,7 @@ const AuthForm = ({ submitLabel, children }: AuthFormProps) => {
       {children}
       <button
         type="submit"
-        className="flex items-center justify-center rounded-3xl bg-lime px-6 py-3 font-satoshi text-lg font-medium leading-[1.2] text-shuttle-950 transition-opacity hover:opacity-90"
+        className="flex items-center justify-center rounded-3xl bg-lime px-6 py-3 font-satoshi text-lg font-medium leading-[1.2] text-shuttle-950 transition-opacity hover:opacity-90 cursor-pointer"
       >
         {submitLabel}
       </button>
