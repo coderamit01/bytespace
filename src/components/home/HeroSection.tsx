@@ -24,7 +24,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-purple [--s:0.5] [--c:0.75] md:[--s:0.6] lg:[--s:0.72] lg:[--c:0.8] xl:[--s:0.85] xl:[--c:0.9] min-[1440px]:[--s:1] min-[1440px]:[--c:1]">
       <div className="grid-bg" />
 
-      <div aria-hidden="true" className="absolute inset-x-0 top-0 pointer-events-none select-none hidden lg:block">
+      <div aria-hidden="true" className="absolute inset-x-0 z-0 top-0 pointer-events-none select-none hidden lg:block">
         <Image src={SquiggleLime2} alt="" className="absolute h-auto max-w-none w-[calc(385px*var(--s))] left-[calc(-118px*var(--s))] top-[calc(221px*var(--s))]" />
         <Image src={CylinderLime} alt="" className="absolute h-auto max-w-none w-[calc(370px*var(--s))] right-[calc(-161px*var(--s))] top-[calc(221px*var(--s))]" />
       </div>
@@ -39,8 +39,8 @@ const HeroSection = () => {
               Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
             </p>
           </div>
-          <form action="/courses" role="search" className="flex w-full flex-col sm:flex-row sm:w-auto items-stretch sm:items-start gap-3 sm:gap-4">
-            <label className="flex h-13 w-full sm:w-115.25 items-center gap-2 rounded-3xl bg-white px-6 py-3">
+          <form action="/courses" role="search" className="flex w-full flex-col sm:flex-row sm:w-auto items-stretch sm:items-start gap-3 sm:gap-5">
+            <label className="flex h-13 w-full sm:w-115.25 items-center gap-2 rounded-4xl bg-white px-6 py-3">
               <MdOutlineSearch size={24} className="shrink-0 text-shuttle-400" />
               <input
                 type="search"
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 className="w-full bg-transparent font-satoshi text-lg leading-[1.6] text-shuttle-950 placeholder:text-shuttle-400 outline-none"
               />
             </label>
-            <button type="submit" className="flex items-center justify-center rounded-3xl bg-lime px-6 py-3 font-satoshi text-lg font-medium leading-[1.2] text-shuttle-950 h-13">
+            <button type="submit" className="w-2/4 md:w-auto mx-auto flex items-center justify-center rounded-4xl bg-lime px-6 py-3 font-satoshi text-lg font-medium leading-[1.2] text-shuttle-950 h-13">
               Search
             </button>
           </form>
@@ -66,15 +66,15 @@ const HeroSection = () => {
           className="absolute left-1/2 -translate-x-1/2 top-0 h-auto max-w-none w-[calc(578px*var(--s))] drop-shadow-[25px_37px_36px_rgba(0,0,0,0.1)]"
         />
 
-        <div className="absolute left-1/2 ml-[calc(122px*var(--s))] top-[calc(139px*var(--s))] origin-top-left [scale:var(--c)] hidden md:flex flex-col items-start gap-2 rounded-2xl bg-white p-4 backdrop-blur-[10px]">
-          <span className="font-satoshi text-sm font-medium leading-[1.2] text-shuttle-950">Learning Progress</span>
-          <span className="w-50 font-poppins text-5xl font-semibold leading-[1.2] tracking-[-0.01em] text-shuttle-950">55%</span>
-          <span className="relative h-2 w-50 rounded-3xl bg-[#F6F6F6]">
+        <div className="absolute left-1/2 ml-[calc(122px*var(--s))] top-[calc(139px*var(--s))] origin-top-left scale-(--c) md:flex flex-col items-start gap-2 rounded-2xl bg-white p-4 backdrop-blur-[10px]">
+          <span className="font-satoshi inline-flex text-sm font-medium leading-[1.2] text-shuttle-950">Learning Progress</span>
+          <span className="w-50 font-poppins text-2xl md:text-4xl font-semibold leading-[1.2] tracking-[-0.01em] text-shuttle-950 py-1 md:py-0">55%</span>
+          <span className="relative h-2 w-full max-w-50 block rounded-3xl bg-[#F6F6F6]">
             <span className="absolute inset-y-0 left-0 w-[56%] rounded-3xl bg-lime" />
           </span>
         </div>
 
-        <div className="absolute left-1/2 ml-[calc(-392px*var(--s))] top-[calc(325px*var(--s))] origin-top-left [scale:var(--c)] hidden md:flex flex-col gap-2 rounded-2xl bg-white p-4 backdrop-blur-[10px]">
+        <div className="absolute left-1/2 ml-[calc(-392px*var(--s))] top-[calc(325px*var(--s))] origin-top-left scale-(--c) md:flex flex-col gap-2 rounded-2xl bg-white p-4 backdrop-blur-[10px]">
           <div className="flex flex-col items-start">
             <span className="font-satoshi text-base font-medium leading-[1.2] text-shuttle-950">Happy Students</span>
             <span className="flex items-center gap-0.5 font-satoshi text-xs leading-[1.6] text-shuttle-400">
@@ -88,22 +88,25 @@ const HeroSection = () => {
                 <Image key={id} src={src} alt="" width={43} height={43} className="-mr-4 size-10.75 rounded-full object-cover" />
               ))
             }
-            <span className="flex size-10.75 items-center justify-center rounded-full bg-lime font-satoshi text-xs font-bold leading-[1.5] text-shuttle-950">2K+</span>
+            <span className="flex size-10.75 items-center justify-center rounded-full bg-lime font-satoshi text-xs font-bold leading-normal text-shuttle-950">2K+</span>
           </div>
         </div>
 
         <div aria-hidden="true" className="pointer-events-none select-none">
-          <Image src={SquiggleWhite} alt="" className="absolute h-auto max-w-none w-[calc(175px*var(--s))] left-[calc(183px*var(--s))] top-[calc(-35px*var(--s))] hidden lg:block" />
-          <Image src={PyramidWhite} alt="" className="absolute h-auto max-w-none w-[calc(188px*var(--s))] right-[calc(146px*var(--s))] top-[calc(-48px*var(--s))] hidden lg:block" />
-          <Image src={RingWhite} alt="" className="absolute h-auto max-w-none w-[calc(342px*var(--s))] left-[calc(18px*var(--s))] top-[calc(170px*var(--s))]" />
-          <Image src={SquiggleLime} alt="" className="absolute h-auto max-w-none w-[calc(330px*var(--s))] right-[calc(-17px*var(--s))] top-[calc(160px*var(--s))] grayscale brightness-110" />
+          <Image src={SquiggleWhite} alt="" className="absolute h-auto max-w-none w-[calc(175px*var(--s))]  xl:left-[calc(183px*var(--s))] top-[calc(-35px*var(--s))] md:left-2 lg:left-12 hidden md:block" />
+
+          <Image src={PyramidWhite} alt="" className="absolute h-auto max-w-none w-[calc(188px*var(--s))]  top-[calc(-48px*var(--s))] md:right-2 lg:right-12 xl:right-30  hidden md:block" />
+          
+          <Image src={RingWhite} alt="" className="absolute h-auto max-w-none w-[calc(342px*var(--s))]  xl:left-32.5 lg:left-5 md:-left-4 2xl:top-30 xl:top-25 lg:top-20 md:top-15 hidden md:block" />
+
+          <Image src={SquiggleLime} alt="" className="absolute h-auto max-w-none w-[calc(330px*var(--s))] lg:right-[calc(-17px*var(--s))] md:-right-8 xl:right-24  top-[calc(160px*var(--s))] grayscale brightness-110 hidden md:block" />
         </div>
 
-        <div className="absolute left-1/2 ml-[calc(-316px*var(--s))] top-[calc(127px*var(--s))] origin-top-left [scale:var(--c)] hidden md:flex flex-col items-start rounded-2xl bg-white p-4 backdrop-blur-[10px]">
+        <div className="absolute left-1/2 -ml-50 md:ml-[calc(-350px*var(--s))] top-5 md:top-[calc(127px*var(--s))] origin-top-left scale-(--c) md:flex flex-col items-start rounded-2xl bg-white p-4 backdrop-blur-[10px]">
           <span className="font-satoshi text-base font-medium leading-[1.2] text-shuttle-950 whitespace-nowrap">UI/UX Design</span>
           <span className="flex items-center gap-2 font-satoshi text-xs leading-[1.6] text-shuttle-400 whitespace-nowrap">
             200 Courses
-            <span className="text-[10px] leading-[1.5]">•</span>
+            <span className="text-[10px] leading-normal">•</span>
             1000+ Students
           </span>
         </div>
