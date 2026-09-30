@@ -8,6 +8,7 @@ import SquiggleWhite from "@/public/icons/squiggle-white.png"
 import RingWhite from "@/public/icons/ring-white.png"
 import CylinderLime from "@/public/icons/cylinder-lime.png"
 import PyramidWhite from "@/public/icons/pyramid-white.png"
+import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } from "@/src/components/shared/avatar"
 
 const students: string[] = [
   "/courses/av1.png",
@@ -83,12 +84,16 @@ const HeroSection = () => {
             </span>
           </div>
           <div className="flex items-center">
-            {
-              students.map((src, id) => (
-                <Image key={id} src={src} alt="" width={43} height={43} className="-mr-4 size-10.75 rounded-full object-cover" />
-              ))
-            }
-            <span className="flex size-10.75 items-center justify-center rounded-full bg-lime font-satoshi text-xs font-bold leading-normal text-shuttle-950">2K+</span>
+            <AvatarGroup>
+              {
+                students.map((src, id) => (
+                  <Avatar key={id}>
+                    <AvatarImage src={src} />
+                  </Avatar>
+                ))
+              }
+              <AvatarGroupCount className="bg-lime font-semibold text-shuttle-gray-950 font-sm">2K+</AvatarGroupCount>
+            </AvatarGroup>
           </div>
         </div>
 
@@ -96,7 +101,7 @@ const HeroSection = () => {
           <Image src={SquiggleWhite} alt="" className="absolute h-auto max-w-none w-[calc(175px*var(--s))] 2xl:left-80 xl:left-[calc(200px*var(--s))] top-[calc(-35px*var(--s))] md:left-2 lg:left-12 hidden md:block" />
 
           <Image src={PyramidWhite} alt="" className="absolute h-auto max-w-none w-[calc(188px*var(--s))] 2xl:right-50 top-[calc(-48px*var(--s))] md:right-2 lg:right-12 xl:right-30  hidden md:block" />
-          
+
           <Image src={RingWhite} alt="" className="absolute h-auto max-w-none w-[calc(342px*var(--s))] 2xl:left-65 xl:left-32.5 lg:left-5 md:-left-4 2xl:top-30 xl:top-25 lg:top-20 md:top-15 hidden md:block" />
           <Image src={SquiggleLime} alt="" className="absolute h-auto max-w-none w-[calc(330px*var(--s))] lg:right-[calc(-17px*var(--s))] md:-right-8 xl:right-24 2xl:right-60 top-[calc(160px*var(--s))] grayscale brightness-110 hidden md:block" />
         </div>

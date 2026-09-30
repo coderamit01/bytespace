@@ -4,7 +4,7 @@ import SectionTitle from "@/src/components/shared/SectionTitle"
 const TestimonialSection = () => {
   return (
     <section className="py-10 lg:py-16 relative bg-[#FAFAFA] overflow-hidden">
-      <div className="brand-circle-shadow size-120 top-[-10%] left-[35%]" />
+      <div className="brand-circle-shadow size-90 md:size-120 -top-40 md:top-[-10%] left-40 md:left-[35%]" />
       <div className="purple-shadow size-280 bottom-[-60%] left-[-25%]" />
       <div className="brand-shadow size-280 top-[-30%] right-[-30%]" />
       <div className="container relative z-10">

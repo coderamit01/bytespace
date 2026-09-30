@@ -3,8 +3,9 @@ import "./globals.css";
 import { fontPoppins, fontSatoshi } from "@/src/lib/fonts";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import SmoothScroll from "@/src/components/shared/SmoothScroll";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: "ByteSpace",
@@ -23,7 +24,9 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", fontPoppins.variable, fontSatoshi.variable, "font-sans", geist.variable)}
     >
       <body className="flex flex-col">
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

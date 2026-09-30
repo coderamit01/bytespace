@@ -4,8 +4,8 @@ import Marquee from "react-fast-marquee";
 
 const PartnersSection = () => {
   return (
-    <section className="bg-shuttle-50">
-      <div className="container py-16 xl:py-20">
+    <section className="bg-shuttle-50 py-12 xl:py-20">
+      <div className="container">
         <Marquee
           autoFill
           direction="left"

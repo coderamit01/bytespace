@@ -8,6 +8,7 @@ import TheBoy from "@/public/images/boy.png"
 import TheGirl from "@/public/images/girl.png"
 import SquiggleLime from "@/public/icons/squiggle-lime.png"
 import SquiggleLime2 from "@/public/icons/squiggle-lime-2.png"
+import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage } from "@/src/components/shared/avatar"
 
 const benefits: string[] = [
   "Share Your Expertise",
@@ -30,11 +31,11 @@ const GrowthSection = () => {
   return (
     <section className="relative overflow-hidden bg-[#FAFAFA] py-20 lg:py-30 [--s:0.55] sm:[--s:0.9] lg:[--s:0.75] xl:[--s:0.9] min-[1440px]:[--s:1]">
       <div aria-hidden="true" className="pointer-events-none">
-        <div className="brand-shadow size-175 -top-40 left-[10%]" />
-        <div className="purple-shadow size-175 top-[35%] -left-80" />
+        <div className="brand-shadow md:size-175 size-80 md:-top-40 md:left-[10%] -left-30 -top-20" />
+        <div className="purple-shadow size-175 top-[25%] -left-80" />
         <div className="purple-shadow size-150 -top-40 -right-60" />
-        <div className="brand-shadow size-168 bottom-0 -left-72" />
-        <div className="purple-shadow size-175 -bottom-40 -right-40" />
+        <div className="brand-shadow size-168 -bottom-28 -left-60" />
+        <div className="purple-shadow size-175 -bottom-55 -right-50" />
       </div>
 
       <div className="container relative z-10">
@@ -111,7 +112,7 @@ const GrowthSection = () => {
                     className="absolute -left-31 top-0 size-170.75 max-w-none"
                   />
                 </div>
-                <div className="absolute left-70.75 top-103.25 flex w-64.5 flex-col justify-center gap-2 rounded-2xl bg-white p-4 backdrop-blur-[10px]">
+                <div className="absolute left-70.75 top-103.25 flex flex-col justify-center gap-2 rounded-2xl bg-white p-4 backdrop-blur-[10px]">
                   <div className="flex flex-col items-start">
                     <span className="font-satoshi text-base font-medium leading-6 text-shuttle-950">Happy Students</span>
                     <span className="flex items-center gap-0.5 font-satoshi text-[10px] leading-[1.5] text-shuttle-400">
@@ -119,14 +120,16 @@ const GrowthSection = () => {
                       <FaStar size={13} className="text-lime" />
                     </span>
                   </div>
-                  <div className="flex items-center">
+                  <AvatarGroup>
                     {
                       students.map((src, id) => (
-                        <Image key={id} src={src} alt="" width={43} height={43} className="-mr-4 size-10.75 rounded-full object-cover" />
+                        <Avatar key={id}>
+                          <AvatarImage src={src} />
+                        </Avatar>
                       ))
                     }
-                    <span className="flex size-10.75 items-center justify-center rounded-full bg-lime font-satoshi text-xs font-bold leading-[1.5] text-shuttle-950">2K+</span>
-                  </div>
+                    <AvatarGroupCount className="bg-lime font-semibold text-shuttle-gray-950 font-sm">2K+</AvatarGroupCount>
+                  </AvatarGroup>
                 </div>
                 <Image src={SquiggleLime2} alt="" aria-hidden="true" className="pointer-events-none absolute left-76.25 top-28.5 h-auto w-53.75 max-w-none" />
               </div>
