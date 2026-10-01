@@ -8,6 +8,7 @@ import { FiBarChart } from "react-icons/fi";
 
 const CourseCard = ({ course }: { course: CourseProps }) => {
   const {
+    slug,
     title,
     image,
     level,
@@ -16,7 +17,8 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
     duration,
     commentsCount,
     price,
-    author
+    author,
+    creatorId
   } = course;
   return (
     <article
@@ -47,8 +49,8 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
             <div className="flex flex-col items-start min-w-0 w-full">
               <h3 className="text-black min-w-0 w-full">
                 <Link
-                  href={`/`}
-                  className="text-xl truncate font-semibold font-poppins block w-full"
+                  href={`/courses/${slug}`}
+                  className="text-xl truncate font-semibold font-poppins block w-full after:absolute after:inset-0 after:rounded-[24px] after:content-['']"
                   title={title}
                 >
                   {title}
@@ -57,7 +59,7 @@ const CourseCard = ({ course }: { course: CourseProps }) => {
               <p className="text-sm font-satoshi text-ink-700 truncate w-full">
                 by{" "}
                 <Link
-                  href={`/`}
+                  href={`/creators/${creatorId}`}
                   className="relative z-10 text-brand hover:underline text-purple"
                 >
                   {author}

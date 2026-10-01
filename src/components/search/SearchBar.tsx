@@ -9,7 +9,7 @@ const searchTypes = ["Courses", "Creators"]
 
 const SearchBar = ({ defaultQuery = "", defaultType = "Courses" }: SearchBarProps) => {
   return (
-    <form action="/search" role="search" className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-start sm:gap-4">
+    <form action="/courses" role="search" className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-start sm:gap-4">
       <label className="flex h-13 w-full items-center gap-2 rounded-full bg-white px-6 py-3 sm:w-115.25">
         <MdOutlineSearch size={24} className="shrink-0 text-shuttle-400" aria-hidden="true" />
         <span className="sr-only">Search courses</span>

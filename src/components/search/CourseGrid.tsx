@@ -1,14 +1,20 @@
 import CourseCard from "@/src/components/home/CourseCard"
+import EmptyState from "@/src/components/shared/EmptyState"
 import { CourseProps } from "@/src/types"
 
-const CourseGrid = ({ courses }: { courses: CourseProps[] }) => {
+type CourseGridProps = {
+  courses: CourseProps[]
+  emptyTitle?: string
+  emptyMessage?: string
+}
+
+const CourseGrid = ({
+  courses,
+  emptyTitle = "No courses found",
+  emptyMessage = "Try a different keyword or browse all courses.",
+}: CourseGridProps) => {
   if (courses.length === 0) {
-    return (
-      <div className="flex flex-col items-center gap-2 rounded-3xl bg-shuttle-50 px-6 py-16 text-center">
-        <p className="font-poppins text-xl font-semibold leading-7 text-shuttle-950">No courses found</p>
-        <p className="font-satoshi text-base leading-[1.6] text-shuttle-700">Try a different keyword or browse all courses.</p>
-      </div>
-    )
+    return <EmptyState title={emptyTitle} message={emptyMessage} />
   }
 
   return (
