@@ -16,19 +16,21 @@ const TopicTabs = () => {
 
   return (
 
-    <div className="flex items-center flex-wrap justify-center gap-x-4 gap-y-5 xl:flex-col xl:flex-nowrap xl:gap-y-5.25">
-      {rows.map((row, rowId) => (
-        <div key={rowId} className="contents xl:flex xl:items-center xl:justify-center xl:gap-x-4">
-          {row.map((item) => (
-            <Pill key={item} topic={item} active={item === active} activeItem={activeItem} />
-          ))}
-          {rowId === rows.length - 1 && (
-            <button type="button" className="typo-label-m whitespace-nowrap text-purple hover:underline">
-              + More
-            </button>
-          )}
-        </div>
-      ))}
+    <div className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:px-0">
+      <div className="flex w-max items-center flex-nowrap gap-x-4 gap-y-5 md:w-auto md:flex-wrap md:justify-center xl:flex-col xl:flex-nowrap xl:gap-y-5.25">
+        {rows.map((row, rowId) => (
+          <div key={rowId} className="contents xl:flex xl:items-center xl:justify-center xl:gap-x-4">
+            {row.map((item) => (
+              <Pill key={item} topic={item} active={item === active} activeItem={activeItem} />
+            ))}
+            {rowId === rows.length - 1 && (
+              <button type="button" className="shrink-0 typo-label-m whitespace-nowrap text-purple hover:underline">
+                + More
+              </button>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
